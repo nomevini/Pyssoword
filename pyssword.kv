@@ -1,0 +1,36 @@
+<Button>:
+    font_size: 40
+    size_hint: .3, .1
+
+<Label>:
+    font_size: 40
+    size: self.texture_size
+
+<TextInput>:
+    multiline: False
+    size_hint: .5, .05
+
+<MeuLayout>:
+    usuario: usuario
+    senha: senha
+
+    Label:
+        text: "Usuário: "
+        pos_hint: {"center_x": .3, "center_y": .625}
+
+    TextInput:
+        pos_hint: {"x": .4, "y": .6}
+        id: usuario
+
+    Label:
+        text: "Senha: "
+        pos_hint: {"center_x": .3, "center_y": .525}
+
+    TextInput:
+        pos_hint: {"x": .4, "y": .5}
+        id: senha
+
+    Button:
+        pos_hint: {"center_x": .5, "center_y": .2}
+        text: "Confirmar"
+        on_press: root.fazerLogin()
