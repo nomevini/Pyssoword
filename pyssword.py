@@ -1,4 +1,5 @@
 from random import choice, shuffle
+from turtle import width
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
@@ -60,11 +61,38 @@ class MeuLayout(FloatLayout):
         self.geradorSenha = Pyssword()
         self.geradorSenha.gerar_senha()
         
+class PysswordLayout(GridLayout):
+    def __init__(self, **kwargs):    
+        super(PysswordLayout, self).__init__(**kwargs)
+        self.cols = 1
+        #self.rows = 4
+        #self.row_force_default=True
+        #self.row_default_height=40
 
+        """self.add_widget(Label(text="Pyssord"))
+        self.senhaGerada = None
+        self.add_widget(Label(text=F"{self.senhaGerada}"))
+        self.botaoGerar = Button(text="Gerar")
+        self.botaoGerar.bind(on_press=self.exibirSenha)
+        self.add_widget(self.botaoGerar)
+        self.botaoConfigurar = Button(text="Configurar")
+        self.add_widget(self.botaoConfigurar)"""
+
+    def botaoGerarSenha(self, instance):
+        pass
+
+    def exibirSenha(self, upperCase:bool = None, lowerCase:bool = True, numbers:bool = True, simbols:bool = True, qtd_numbers:int =8) -> str:
+        self.geradorSenha = Pyssword()
+        self.senhaGerada =  self.geradorSenha.gerar_senha()
+        self.ids.senha.text = self.senhaGerada = self.geradorSenha.gerar_senha()
+        
+
+        
 
 class PysswordApp(App):
     def build(self):
-        return MeuLayout()
+        #return MeuLayout()
+        return PysswordLayout()
 
 
 if __name__ == "__main__":
