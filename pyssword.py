@@ -1,5 +1,12 @@
-<<<<<<< HEAD
 from random import choice, shuffle
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.widget import Widget
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+from kivy.properties import ObjectProperty
+from kivy.uix.floatlayout import FloatLayout
 
 
 class Pyssword:
@@ -33,15 +40,7 @@ class Pyssword:
         else:
             # nenhum campo foi escolhido, impossivel gerar senha
             return False
-=======
-from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.widget import Widget
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
-from kivy.properties import ObjectProperty
-from kivy.uix.floatlayout import FloatLayout
+
 
 class MeuLayout(FloatLayout):
     usuario = ObjectProperty(None)
@@ -58,10 +57,11 @@ class MeuLayout(FloatLayout):
         self.usuario.text = ""
         self.senha.text = ""
 
+
 class PysswordApp(App):
     def build(self):
         return MeuLayout()
 
+
 if __name__ == "__main__":
     PysswordApp().run()
->>>>>>> c7e16062725bb348b2effde823b54cdc1e156d49
