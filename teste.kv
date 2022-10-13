@@ -1,0 +1,80 @@
+
+GerenciadorTelas:
+    TelaPrincipal: 
+        name: 'TelaPrincipal'
+    TelaConfiguracao:
+        name: 'TelaConfiguracao'
+
+<TelaPrincipal>:
+    GridLayout:
+
+    Label:
+        id: pyssword
+        text: "Pyssword"
+        font_size: 40
+    
+    Label:
+        id: senha
+        text: ""
+
+    Button:
+        text: "Gerar"
+        on_press: root.exibirSenha()
+    
+    Button:
+        text: "Configurações"
+        on_release: app.root.current = 'TelaConfiguracao'
+
+<TelaConfiguracao>:
+    GridLayout:
+
+    Label:
+        id: letrasMaiusculas
+        text: "Letras maiúsculas: "
+
+    Switch:
+        id: sLetrasMaiusculas
+        active: True
+        on_active: root.switch_click(self, self.active,'LetrasMaiusculas')
+        
+    Label:
+        id: letrasMinusculas
+        text: "Letras minúsculas: "
+
+    Switch:
+        id: sLetrasMinusculas
+        active: True
+        on_active: root.letrasMinusculas = True
+        on_active: root.switch_click(self, self.active,'LetrasMinusculas')
+    Label:
+        id: numeros
+        text: "Números: "
+
+    Switch:
+        id: sNumeros
+        active: True
+        on_active: root.numeros = True
+        on_active: root.switch_click(self, self.active,'Numeros')
+
+    Label:
+        id: simbolos
+        text: "Símbolos(!@$): "
+    
+    Switch:
+        id: sSimbolos
+        active: True
+        on_active: root.simbolos = True
+        on_active: root.switch_click(self, self.active,'Simbolos')
+
+    Label:
+        id: qntCaracteres
+        text: "Quantidade de caracteres: "
+    
+    Switch:
+        id: sQntCaracteres    
+        active: True
+        on_active: root.switch_click(self, self.active,'QuantidadeCaracteres')
+
+    Button:
+        text: "Voltar"
+        on_release: app.root.current = 'TelaPrincipal'
