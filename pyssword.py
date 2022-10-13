@@ -9,6 +9,7 @@ from kivy.uix.button import Button
 from kivy.properties import ObjectProperty
 from kivy.uix.floatlayout import FloatLayout
 
+
 class Pyssword:
     def __init__(self):
         self.letters_lower_case = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",

@@ -44,7 +44,6 @@ GerenciadorTelas:
     Switch:
         id: sLetrasMinusculas
         active: True
-        on_active: root.letrasMinusculas = True
         on_active: root.switch_click(self, self.active,'LetrasMinusculas')
     Label:
         id: numeros
@@ -53,7 +52,6 @@ GerenciadorTelas:
     Switch:
         id: sNumeros
         active: True
-        on_active: root.numeros = True
         on_active: root.switch_click(self, self.active,'Numeros')
 
     Label:
@@ -63,18 +61,23 @@ GerenciadorTelas:
     Switch:
         id: sSimbolos
         active: True
-        on_active: root.simbolos = True
         on_active: root.switch_click(self, self.active,'Simbolos')
 
     Label:
         id: qntCaracteres
         text: "Quantidade de caracteres: "
     
-    Switch:
-        id: sQntCaracteres    
-        active: True
-        on_active: root.switch_click(self, self.active,'QuantidadeCaracteres')
+    Slider:
+        id: sQntCaracteres
+        min:0
+        max:50
+        value: 10
+        step: 1
+
+    Label:
+        text: str(sQntCaracteres.value)
 
     Button:
         text: "Voltar"
+        on_press: root.defineTypePassword()
         on_release: app.root.current = 'TelaPrincipal'
