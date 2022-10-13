@@ -34,7 +34,6 @@ class Pyssword:
     def gerar_senha(self):
         senha = ''
         if self.upperCase or self.lowerCase or self.numbers or self.simbols:
-            print(f"Quantidade de numeros: {self.qtd_numbers}")
             while len(senha) < self.qtd_numbers:
                 if self.upperCase:
                     senha += choice(self.letters_upper_case)
@@ -67,17 +66,16 @@ class TelaPrincipal(GridLayout, Screen):
     def exibirSenha(self, upperCase:bool = None, lowerCase:bool = True, numbers:bool = True, simbols:bool = True, qtd_numbers:int =8) -> str:
         #self.geradorSenha = Pyssword()
         self.senhaGerada = passwordGenerator.gerar_senha()
-        self.ids.senha.text = self.senhaGerada
+        if self.senhaGerada:
+            self.ids.senha.text = self.senhaGerada
+        else:
+            self.ids.senha.text = "Opções para geração de senha inválidas"
 
 
 class TelaConfiguracao(GridLayout, Screen):
     def __init__(self, **kwargs):    
         super(TelaConfiguracao, self).__init__(**kwargs)
         self.cols = 1
-
-    # , sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value
-    def switch_click(self, switchObject, switchValue, configuração):
-        print(switchValue, configuração)
 
     # objetivo desssa funcao e definir os atributos
     def defineTypePassword(self):
