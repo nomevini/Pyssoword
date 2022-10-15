@@ -1,0 +1,94 @@
+<GerenciadorTelas>
+    TelaPrincipal:
+        name: 'principal'
+        id: principal
+        GridLayout:
+            cols: 1
+            rows: 5
+            Label:
+                id: pyssword
+                text: "Pyssword"
+                font_size: 40
+                italic: True
+            Label:
+                id: senha
+                text: ""
+
+            Button:
+                text: "Gerar"
+                on_press: text = principal.exibirSenha()
+                font_size: 18
+
+            Button:
+                text: "Configurações"
+                on_release: root.go_to('configuracao')
+                font_size: 18
+
+            Button:
+                text: "Copiar"
+                on_press: principal.copiarParaAreaTransferencia()
+                font_size: 18
+
+    TelaConfiguracao:
+        name: 'configuracao'
+        id: configuracao
+        GridLayout:
+            cols: 1
+            rows:12
+            Label:
+                id: letrasMaiusculas
+                text: "Letras maiúsculas: "
+                font_size: 22
+
+            Switch:
+                id: sLetrasMaiusculas
+                active: True
+
+            Label:
+                id: letrasMinusculas
+                text: "Letras minúsculas: "
+                font_size: 22
+
+            Switch:
+                id: sLetrasMinusculas
+                active: True
+
+            Label:
+                id: numeros
+                text: "Números: "
+                font_size: 22
+
+            Switch:
+                id: sNumeros
+                active: True
+
+            Label:
+                id: simbolos
+                text: "Símbolos(!@$): "
+                font_size: 22
+
+            Switch:
+                id: sSimbolos
+                active: True
+
+            Label:
+                id: qntCaracteres
+                text: "Quantidade de caracteres: "
+                font_size: 22
+
+            Slider:
+                id: sQntCaracteres
+                min:0
+                max:50
+                value: 10
+                step: 1
+
+            Label:
+                text: str(sQntCaracteres.value)
+                font_size: 18
+
+            Button:
+                text: "Voltar"
+                on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
+                on_release: root.go_to('principal')
+                font_size: 18
