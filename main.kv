@@ -5,17 +5,19 @@
         GridLayout:
             cols: 1
             rows: 5
-            padding : 10
+            padding : 150, 100, 150, 100
             spacing: 10
             Label:
                 id: pyssword
                 text: "Pyssword"
                 font_size: 100
                 italic: True
+                font_name: 'fonts/Cousine-Regular.ttf'
             Label:
                 id: senha
                 text: ""
-                ont_size: 80
+                font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
             Button:
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
@@ -30,6 +32,7 @@
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
+                font_name: 'fonts/Cousine-Regular.ttf'
             Button:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
@@ -37,6 +40,7 @@
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
+                font_name: 'fonts/Cousine-Regular.ttf'
     TelaConfiguracao:
         name: 'configuracao'
         id: configuracao
@@ -47,6 +51,7 @@
                 id: letrasMaiusculas
                 text: "Letras maiúsculas: "
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sLetrasMaiusculas
@@ -56,6 +61,7 @@
                 id: letrasMinusculas
                 text: "Letras minúsculas: "
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sLetrasMinusculas
@@ -65,6 +71,7 @@
                 id: numeros
                 text: "Números: "
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sNumeros
@@ -74,6 +81,7 @@
                 id: simbolos
                 text: "Símbolos(!@$): "
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sSimbolos
@@ -83,6 +91,7 @@
                 id: qntCaracteres
                 text: "Quantidade de caracteres: "
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Slider:
                 id: sQntCaracteres
@@ -94,6 +103,7 @@
             Label:
                 text: str(sQntCaracteres.value)
                 font_size: 80
+                font_name: 'fonts/Cousine-Regular.ttf'
 
             Button:
                 text: "Voltar"
@@ -103,3 +113,4 @@
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
+                font_name: 'fonts/Cousine-Regular.ttf'
