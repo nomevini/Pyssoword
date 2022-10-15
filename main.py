@@ -16,7 +16,7 @@ from kivy.core.window import Window
 Window.clearcolor = (186/255,35/255,246/255,1)
 
 class GerenciadorTelas(ScreenManager):
-    def go_to(self, screen):
+    def irParaTela(self, screen):
         self.current = screen
 
 
@@ -81,16 +81,6 @@ class TelaConfiguracao(Screen):
         passwordGenerator.numbers = numbers
         passwordGenerator.simbols = simbols
         passwordGenerator.qtd_numbers = int(qtd_numbers)
-
-
-class SimpleSwitch(GridLayout): 
-    def __init__(self, **kwargs): 
-        super(SimpleSwitch, self).__init__(**kwargs) 
-        self.cols = 2
-        self.add_widget(Label(text ="Switch")) 
-        self.settings_sample = Switch(active=False)
-        self.add_widget(self.settings_sample)
-
 
 class MainApp(App):
     def build(self):
