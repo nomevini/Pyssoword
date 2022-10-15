@@ -23,7 +23,7 @@
                 color: (0,0,0)
             RoundedButton:
                 text: "Configurações"
-                on_release: root.go_to('configuracao')
+                on_release: root.irParaTela('configuracao')
                 font_size: 60
                 color: (0,0,0)
             RoundedButton:
@@ -92,7 +92,7 @@
             RoundedButton:
                 text: "Voltar"
                 on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
-                on_release: root.go_to('principal')
+                on_release: root.irParaTela('principal')
                 font_size: 60
                 color: (0,0,0)
 <RoundedButton@Button>
