@@ -12,7 +12,8 @@ from kivy.uix.switch import Switch
 from kivy.uix.slider import Slider
 from kivy.core.clipboard import Clipboard as Cb
 #import pyperclip
-
+from kivy.core.window import Window
+Window.clearcolor = (186/255,35/255,246/255,1)
 
 class GerenciadorTelas(ScreenManager):
     def go_to(self, screen):

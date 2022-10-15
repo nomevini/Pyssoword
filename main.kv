@@ -5,6 +5,10 @@
         GridLayout:
             cols: 1
             rows: 5
+            background_normal: ""
+            background_color: (36/255, 214/255, 84/255,1)
+            padding : 10
+            spacing: 10
             Label:
                 id: pyssword
                 text: "Pyssword"
@@ -18,17 +22,23 @@
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
                 font_size: 18
-
+                color: (0,0,0)
+                background_normal: ""
+                background_color: (245/255, 245/255, 245/255,1)
             Button:
                 text: "Configurações"
                 on_release: root.go_to('configuracao')
                 font_size: 18
-
+                color: (0,0,0)
+                background_normal: ""
+                background_color: (245/255, 245/255, 245/255,1)
             Button:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
                 font_size: 18
-
+                color: (0,0,0)
+                background_normal: ""
+                background_color: (245/255, 245/255, 245/255,1)
     TelaConfiguracao:
         name: 'configuracao'
         id: configuracao
@@ -92,3 +102,6 @@
                 on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
                 on_release: root.go_to('principal')
                 font_size: 18
+                color: (0,0,0)
+                background_normal: ""
+                background_color: (245/255, 245/255, 245/255,1)
