@@ -12,30 +12,30 @@
             Label:
                 id: pyssword
                 text: "Pyssword"
-                font_size: 40
+                font_size: 100
                 italic: True
             Label:
                 id: senha
                 text: ""
-
+                ont_size: 80
             Button:
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
-                font_size: 18
+                font_size: 60
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
             Button:
                 text: "Configurações"
                 on_release: root.go_to('configuracao')
-                font_size: 18
+                font_size: 60
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
             Button:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
-                font_size: 18
+                font_size: 60
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
@@ -48,7 +48,7 @@
             Label:
                 id: letrasMaiusculas
                 text: "Letras maiúsculas: "
-                font_size: 22
+                font_size: 80
 
             Switch:
                 id: sLetrasMaiusculas
@@ -57,7 +57,7 @@
             Label:
                 id: letrasMinusculas
                 text: "Letras minúsculas: "
-                font_size: 22
+                font_size: 80
 
             Switch:
                 id: sLetrasMinusculas
@@ -66,7 +66,7 @@
             Label:
                 id: numeros
                 text: "Números: "
-                font_size: 22
+                font_size: 80
 
             Switch:
                 id: sNumeros
@@ -75,7 +75,7 @@
             Label:
                 id: simbolos
                 text: "Símbolos(!@$): "
-                font_size: 22
+                font_size: 80
 
             Switch:
                 id: sSimbolos
@@ -84,7 +84,7 @@
             Label:
                 id: qntCaracteres
                 text: "Quantidade de caracteres: "
-                font_size: 22
+                font_size: 80
 
             Slider:
                 id: sQntCaracteres
@@ -95,13 +95,13 @@
 
             Label:
                 text: str(sQntCaracteres.value)
-                font_size: 18
+                font_size: 80
 
             Button:
                 text: "Voltar"
                 on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
                 on_release: root.go_to('principal')
-                font_size: 18
+                font_size: 60
                 color: (0,0,0)
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
