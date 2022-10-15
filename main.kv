@@ -18,7 +18,7 @@
                 text: ""
                 font_size: 80
                 font_name: 'fonts/Cousine-Regular.ttf'
-            Button:
+            RoundedButton:
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
                 font_size: 60
@@ -33,7 +33,7 @@
                 background_normal: ""
                 background_color: (245/255, 245/255, 245/255,1)
                 font_name: 'fonts/Cousine-Regular.ttf'
-            Button:
+            RoundedButton:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
                 font_size: 60
@@ -122,4 +122,5 @@
         RoundedRectangle:
             size: self.size
             pos: self.pos
-            radius: [35]                font_name: 'fonts/Cousine-Regular.ttf'
+            radius: [35]                
+            #font_name: 'fonts/Cousine-Regular.ttf'
