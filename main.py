@@ -10,7 +10,8 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.switch import Switch
 from kivy.uix.slider import Slider
-import pyperclip
+from kivy.core.clipboard import Clipboard as Cb
+#import pyperclip
 
 
 class GerenciadorTelas(ScreenManager):
@@ -68,8 +69,8 @@ class TelaPrincipal(Screen):
             self.manager.ids.senha.text = "Opções para geração de senha inválidas"
 
     def copiarParaAreaTransferencia(self):
-        pyperclip.copy(self.manager.ids.senha.text)
-	
+        #pyperclip.copy(self.manager.ids.senha.text)
+        Cb.copy(self.manager.ids.senha.text)
 
 class TelaConfiguracao(Screen):
     # objetivo desssa funcao e definir os atributos
