@@ -16,21 +16,40 @@
                 id: senha
                 text: ""
                 font_size: 80
-            RoundedButton:
+            Button:
+                background_normal: ''
+                background_color: (245/255, 245/255, 245/255,1) 
+                color: (0,0,0)
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
+                
+                on_press: self.color = (245/255, 245/255, 245/255,1) 
+                on_touch_up: self.color = (0,0,0)
+
                 font_size: 60
+                
+            Button:
+                background_normal: ''
+                background_color: (245/255, 245/255, 245/255,1) 
                 color: (0,0,0)
-            RoundedButton:
                 text: "Configurações"
-                on_release: root.irParaTela('configuracao')
+                on_press: root.irParaTela('configuracao')
+
+                on_press: self.color = (245/255, 245/255, 245/255,1) 
+                on_touch_up: self.color = (0,0,0)
+
                 font_size: 60
+            Button:
+                background_normal: ''
+                background_color: (245/255, 245/255, 245/255,1) 
                 color: (0,0,0)
-            RoundedButton:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
+
+                on_press: self.color = (245/255, 245/255, 245/255,1) 
+                on_touch_up: self.color = (0,0,0)
+
                 font_size: 60
-                color: (0,0,0)
     TelaConfiguracao:
         name: 'configuracao'
         id: configuracao
@@ -89,24 +108,16 @@
                 text: str(sQntCaracteres.value)
                 font_size: 80
 
-            RoundedButton:
+            Button:
+                background_normal: ''
+                background_color: (245/255, 245/255, 245/255,1) 
+                color: (0,0,0)
                 text: "Voltar"
                 on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
-                on_release: root.irParaTela('principal')
+                on_press: root.irParaTela('principal')
+                
+                on_press: self.color = (245/255, 245/255, 245/255,1) 
+                on_touch_up: self.color = (0,0,0)
+
                 font_size: 60
-                color: (0,0,0)
-<RoundedButton@Button>
-    background_color: (0,0,0,0)
-    background_normal: ''
-
-
-    canvas.before:
-
-        Color:
-            rgba: (245/255, 245/255, 245/255,1)
-        RoundedRectangle:
-            size: self.size
-            pos: self.pos
-            radius: [35]    
-
-           
+ 
