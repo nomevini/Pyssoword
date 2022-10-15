@@ -15,7 +15,7 @@
             Label:
                 id: senha
                 text: ""
-                font_size: 80
+                font_size: 50
             Button:
                 background_normal: ''
                 background_color: (245/255, 245/255, 245/255,1) 
@@ -54,6 +54,7 @@
         name: 'configuracao'
         id: configuracao
         GridLayout:
+            padding : 300, 50, 300, 50
             cols: 1
             rows:12
             Label:
@@ -96,17 +97,19 @@
                 id: qntCaracteres
                 text: "Quantidade de caracteres: "
                 font_size: 80
-
-            Slider:
-                id: sQntCaracteres
-                min:0
-                max:50
-                value: 10
-                step: 1
-
+            
             Label:
                 text: str(sQntCaracteres.value)
                 font_size: 80
+                
+            Slider:
+                id: sQntCaracteres
+                min:0
+                max: 30
+                value: 10
+                step: 1
+
+
 
             Button:
                 background_normal: ''
