@@ -23,23 +23,18 @@
                 on_press: text = principal.exibirSenha()
                 font_size: 60
                 color: (0,0,0)
-                #background_normal: ""
-                #background_color: (245/255, 245/255, 245/255,1)
+                font_name: 'fonts/Cousine-Regular.ttf'
             RoundedButton:
                 text: "Configurações"
                 on_release: root.go_to('configuracao')
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
                 font_name: 'fonts/Cousine-Regular.ttf'
             RoundedButton:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
                 font_name: 'fonts/Cousine-Regular.ttf'
     TelaConfiguracao:
         name: 'configuracao'
@@ -111,8 +106,7 @@
                 on_release: root.go_to('principal')
                 font_size: 60
                 color: (0,0,0)
-                #background_normal: ""
-                #background_color: (245/255, 245/255, 245/255,1)
+                font_name: 'fonts/Cousine-Regular.ttf'
 <RoundedButton@Button>
     background_color: (0,0,0,0)
     background_normal: ''
