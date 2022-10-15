@@ -12,30 +12,25 @@
                 text: "Pyssword"
                 font_size: 100
                 italic: True
-                font_name: 'fonts/Cousine-Regular.ttf'
             Label:
                 id: senha
                 text: ""
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
             RoundedButton:
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
                 font_size: 60
                 color: (0,0,0)
-                font_name: 'fonts/Cousine-Regular.ttf'
             RoundedButton:
                 text: "Configurações"
                 on_release: root.go_to('configuracao')
                 font_size: 60
                 color: (0,0,0)
-                font_name: 'fonts/Cousine-Regular.ttf'
             RoundedButton:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
                 font_size: 60
                 color: (0,0,0)
-                font_name: 'fonts/Cousine-Regular.ttf'
     TelaConfiguracao:
         name: 'configuracao'
         id: configuracao
@@ -46,7 +41,6 @@
                 id: letrasMaiusculas
                 text: "Letras maiúsculas: "
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sLetrasMaiusculas
@@ -56,7 +50,6 @@
                 id: letrasMinusculas
                 text: "Letras minúsculas: "
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sLetrasMinusculas
@@ -66,7 +59,6 @@
                 id: numeros
                 text: "Números: "
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sNumeros
@@ -76,7 +68,6 @@
                 id: simbolos
                 text: "Símbolos(!@$): "
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             Switch:
                 id: sSimbolos
@@ -86,7 +77,6 @@
                 id: qntCaracteres
                 text: "Quantidade de caracteres: "
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             Slider:
                 id: sQntCaracteres
@@ -98,7 +88,6 @@
             Label:
                 text: str(sQntCaracteres.value)
                 font_size: 80
-                font_name: 'fonts/Cousine-Regular.ttf'
 
             RoundedButton:
                 text: "Voltar"
@@ -106,7 +95,6 @@
                 on_release: root.go_to('principal')
                 font_size: 60
                 color: (0,0,0)
-                font_name: 'fonts/Cousine-Regular.ttf'
 <RoundedButton@Button>
     background_color: (0,0,0,0)
     background_normal: ''
@@ -117,4 +105,3 @@
             size: self.size
             pos: self.pos
             radius: [35]                
-            #font_name: 'fonts/Cousine-Regular.ttf'
