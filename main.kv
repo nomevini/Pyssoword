@@ -7,7 +7,7 @@
             rows: 5
             background_normal: ""
             background_color: (36/255, 214/255, 84/255,1)
-            padding : 10
+            padding : 150,100,150,100
             spacing: 10
             Label:
                 id: pyssword
@@ -18,27 +18,27 @@
                 id: senha
                 text: ""
                 ont_size: 80
-            Button:
+            RoundedButton:
                 text: "Gerar"
                 on_press: text = principal.exibirSenha()
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
-            Button:
+                #background_normal: ""
+                #background_color: (245/255, 245/255, 245/255,1)
+            RoundedButton:
                 text: "Configurações"
                 on_release: root.go_to('configuracao')
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
-            Button:
+                #background_normal: ""
+                #background_color: (245/255, 245/255, 245/255,1)
+            RoundedButton:
                 text: "Copiar"
                 on_press: principal.copiarParaAreaTransferencia()
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
+                #background_normal: ""
+                #background_color: (245/255, 245/255, 245/255,1)
     TelaConfiguracao:
         name: 'configuracao'
         id: configuracao
@@ -97,11 +97,21 @@
                 text: str(sQntCaracteres.value)
                 font_size: 80
 
-            Button:
+            RoundedButton:
                 text: "Voltar"
                 on_press: configuracao.defineTypePassword(sLetrasMaiusculas.active, sLetrasMinusculas.active, sNumeros.active, sSimbolos.active, sQntCaracteres.value)
                 on_release: root.go_to('principal')
                 font_size: 60
                 color: (0,0,0)
-                background_normal: ""
-                background_color: (245/255, 245/255, 245/255,1)
+                #background_normal: ""
+                #background_color: (245/255, 245/255, 245/255,1)
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (245/255, 245/255, 245/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [35]
