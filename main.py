@@ -85,7 +85,6 @@ class TelaConfiguracao(Screen):
 class MainApp(App):
     def build(self):
         return GerenciadorTelas()
-    pass
 
 
 if __name__ == "__main__":
